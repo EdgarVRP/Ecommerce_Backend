@@ -1,0 +1,22 @@
+DROP DATABASE test;
+
+CREATE DATABASE test;
+
+USE railway;
+
+CREATE TABLE examples (
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  info VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+INSERT INTO examples (id, name, info)
+VALUES 
+(1, "one", "ONE"),
+(2, "two", "TWO"),
+(3, "three", "THREE"),
+(4, "four", "FOUR"),
+(5, "five", "FIVE");
+
+SELECT * FROM examples;
