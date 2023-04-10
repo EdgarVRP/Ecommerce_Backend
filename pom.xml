@@ -8,11 +8,11 @@
 		<version>2.7.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>sprintBoot</artifactId>
+	<groupId>com.ecommerce</groupId>
+	<artifactId>Ecommerce_Backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Example</name>
-	<description>Example spring boot</description>
+	<name>CafeAlfonso</name>
+	<description>Backend con spring boot para ecommerce Cafe Alfonso</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

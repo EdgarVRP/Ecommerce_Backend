@@ -1,10 +1,10 @@
-package com.example;
+package com.ecommerce;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExampleApplicationTests {
+class CafeAlfonsoApplicationTests {
 
 	@Test
 	void contextLoads() {
