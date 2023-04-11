@@ -49,18 +49,50 @@ public class ProductoService {
 				});
 	}
 
-	//Actualiza algunos campos del elemento?
-	//Transactional es como un commit si alfo falla regresa a su estado inicial
+	// Actualiza algunos campos del elemento?
+	// Transactional es como un commit si alfo falla regresa a su estado inicial
 	@Transactional
-	public void updateProducto(Long id, String name, String info) {
-		Producto producto = productoRepository.findById(id)
+	public void updateProducto(
+			Long id,
+			String nombre,
+			String rutaimagen,
+			String region,
+			String cosecha,
+			String altura,
+			Integer humedad,
+			String proceso,
+			String preparacion,
+			String variedad,
+			Double precio,
+			Integer inventario,
+			String nota,
+			Integer puntuacion) {
+		Producto productoBuscado = productoRepository.findById(id)
 				.orElseThrow(() -> new IllegalStateException("The element dont exist"));
-
-		if ((name != null))
-			if ((!name.isEmpty())) {
-				producto.setNombre(name);
-			}
-
+		if (nombre != null)
+			productoBuscado.setNombre(nombre);
+		if (rutaimagen != null)
+			productoBuscado.setRutaimagen(rutaimagen);
+		if (region != null)
+			productoBuscado.setRegion(region);
+		if (cosecha != null)
+			productoBuscado.setCosecha(cosecha);
+		if (altura != null)
+			productoBuscado.setAltura(altura);
+		if (humedad != null)
+			productoBuscado.setHumedad(humedad);
+		if (proceso != null)
+			productoBuscado.setProceso(proceso);
+		if (preparacion != null)
+			productoBuscado.setPreparacion(preparacion);
+		if (variedad != null)
+			productoBuscado.setVariedad(variedad);
+		if (precio != null)
+			productoBuscado.setPrecio(precio);
+		if (inventario != null)
+			productoBuscado.setInventario(inventario);
+		productoRepository.save(productoBuscado);
+		System.out.println("Producto actualizado: " + productoBuscado.toString());
 	}
 
 	// Delete
