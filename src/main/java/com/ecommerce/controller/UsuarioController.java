@@ -46,12 +46,29 @@ public class UsuarioController {
 		return usuarioService.getUsuario(id);
 	}
 
+	// Obtiene un elemento de la tabla por el id
+	// Regresa
+	@GetMapping(path = "/login")
+	public Usuario loginUsuario(
+			@RequestParam(required = true) String email,
+			@RequestParam(required = true) String password) {
+		return usuarioService.loginUsuario(email, password);
+	}
+
+	// @RequestParam(required = false) String name,
+	// @RequestParam(required = false) String info
+
 	// POST
 	// Crea un elemento
 	// @RequestMapping(value="", method=RequestMethod.POST, produces="text/plain")
+	// @PostMapping()
+	// public String addUsuario(@RequestBody Usuario usuario) {
+	// return "\"" + usuarioService.addUsuario(usuario) + "\"";
+	// }
+
 	@PostMapping()
-	public String addUsuario(@RequestBody Usuario usuario) {
-    	return "\"" + usuarioService.addUsuario(usuario) + "\"";
+	public Usuario addUsuario(@RequestBody Usuario usuario) {
+		return usuarioService.addUsuario(usuario);
 	}
 
 	// PUT
@@ -72,6 +89,7 @@ public class UsuarioController {
 	// Elimina un elemento de la tabla
 	@DeleteMapping(path = "/{id}")
 	public void deleteUsuario(@PathVariable("id") Long id) {
+		System.out.println("Delete");
 		usuarioService.deleteUsuario(id);
 	}
 

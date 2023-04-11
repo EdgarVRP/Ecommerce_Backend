@@ -11,6 +11,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     @Query("SELECT u FROM Usuario u WHERE u.email = ?1")
     Optional<Usuario> findByEmail(String email);
 
+    @Query("SELECT u FROM Usuario u WHERE u.email = ?1 AND u.password = ?2")
+    Optional<Usuario> findByEmailAndPassword(String email, String password);
+
     // @Query("SELECT COUNT(u.id) FROM Usuario u WHERE u.email=:email") 
     // Long countUsersWithEmail(String email);
 

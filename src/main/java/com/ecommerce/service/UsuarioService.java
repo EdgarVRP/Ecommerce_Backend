@@ -29,26 +29,22 @@ public class UsuarioService {
 	}
 
 	public Usuario getUsuario(Long id) {
-		return usuarioRepository.findById(id).orElseThrow(() -> new IllegalStateException("The element dont exist"));
+		return usuarioRepository.findById(id).orElseThrow(() -> new IllegalStateException("El usuario no existe"));
 	}
 
-	// Post
-	// Guarda un nuevo elemento
-	public Usuario addUsuario2(Usuario usuario) {
-		return usuarioRepository.save(usuario);
+	public Usuario loginUsuario(String email, String password) {
+		return usuarioRepository.findByEmailAndPassword(email, password).orElseThrow(() -> new IllegalStateException("Usuario o contraseña incorrectos"));
 	}
 
-	public String addUsuario(Usuario usuario) {
+	public Usuario addUsuario(Usuario usuario) {
         Optional<Usuario> usuarioByName = usuarioRepository.findByEmail(usuario.getEmail());
         if (usuarioByName.isPresent()) {
-			return "Usuario ya registrado";
+			return new Usuario();
             // throw new IllegalStateException("El correo " + usuario.getEmail() + " ya esta registrado");
         } else {
-			usuarioRepository.save(usuario);
-			return "Usuario agregado con exito";
+			return usuarioRepository.save(usuario);
 		}
     }
-	
 
 	// Put
 	// Busca el elemento para actualizarlo si no lo encuentra lo crea
