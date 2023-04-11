@@ -51,16 +51,37 @@ public class ProductoController {
 
 	// PUT
 	// Actualiza o crea un elemento
-	@PutMapping(path = "/{id}")
+	@PutMapping(path = "/{id}/test")
 	Producto updateProductoJSON(@RequestBody Producto producto, @PathVariable("id") Long id) {
 		return productoService.updateProducto(producto, id);
 	}
 
-	@PutMapping(path = "/url/{id}")
-	public void updateProductoURL(@PathVariable("id") Long id,
-			@RequestParam(required = false) String name,
-			@RequestParam(required = false) String info) {
-		productoService.updateProducto(id, name, info);
+	@PutMapping(path = "{id}")
+	public void updateProducto(@PathVariable("id") Long id,
+			@RequestParam(required = false) String nombre,
+			@RequestParam(required = false) String rutaimagen,
+			@RequestParam(required = false) String region,
+			@RequestParam(required = false) String cosecha,
+			@RequestParam(required = false) String altura,
+			@RequestParam(required = false) Integer humedad,
+			@RequestParam(required = false) String proceso,
+			@RequestParam(required = false) String preparacion,
+			@RequestParam(required = false) String variedad,
+			@RequestParam(required = false) Double precio,
+			@RequestParam(required = false) Integer inventario) {
+		productoService.updateProducto(
+				id,
+				nombre,
+				rutaimagen,
+				region,
+				cosecha,
+				altura,
+				humedad,
+				proceso,
+				preparacion,
+				variedad,
+				precio,
+				inventario);
 	}
 
 	// DELETE

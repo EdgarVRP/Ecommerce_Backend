@@ -8,32 +8,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="productos")
+@Table(name = "productos")
 
 public class Producto {
-	@Id 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	
+
 	private Long id;
 	private String nombre;
 	private String rutaimagen;
 	private String region;
 	private String cosecha;
 	private String altura;
-	private String humedad;
+	private Integer humedad;
 	private String proceso;
 	private String preparacion;
 	private String variedad;
-	private String precio;
-	private String inventario;
-	
-	public Producto() { //empty constructor
-		
+	private Double precio;
+	private Integer inventario;
+
+	public Producto() { // empty constructor
+
 	}
 
 	public Producto(Long id, String nombre, String rutaimagen, String region, String cosecha, String altura,
-			String humedad, String proceso, String preparacion, String variedad, String precio, String inventario) {
+			Integer humedad, String proceso, String preparacion, String variedad, Double precio, Integer inventario) {
 		this.id = id;
 		this.nombre = nombre;
 		this.rutaimagen = rutaimagen;
@@ -96,11 +96,11 @@ public class Producto {
 		this.altura = altura;
 	}
 
-	public String getHumedad() {
+	public Integer getHumedad() {
 		return humedad;
 	}
 
-	public void setHumedad(String humedad) {
+	public void setHumedad(Integer humedad) {
 		this.humedad = humedad;
 	}
 
@@ -128,19 +128,19 @@ public class Producto {
 		this.variedad = variedad;
 	}
 
-	public String getPrecio() {
+	public Double getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(String precio) {
+	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 
-	public String getInventario() {
+	public Integer getInventario() {
 		return inventario;
 	}
 
-	public void setInventario(String inventario) {
+	public void setInventario(Integer inventario) {
 		this.inventario = inventario;
 	}
 
@@ -151,7 +151,5 @@ public class Producto {
 				+ ", preparacion=" + preparacion + ", variedad=" + variedad + ", precio=" + precio + ", inventario="
 				+ inventario + "]";
 	}
-
-	
 
 }
