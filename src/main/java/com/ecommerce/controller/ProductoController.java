@@ -68,7 +68,9 @@ public class ProductoController {
 			@RequestParam(required = false) String preparacion,
 			@RequestParam(required = false) String variedad,
 			@RequestParam(required = false) Double precio,
-			@RequestParam(required = false) Integer inventario) {
+			@RequestParam(required = false) Integer inventario,
+			@RequestParam(required = false) String nota,
+			@RequestParam(required = false) Integer puntuacion) {
 		productoService.updateProducto(
 				id,
 				nombre,
@@ -81,7 +83,9 @@ public class ProductoController {
 				preparacion,
 				variedad,
 				precio,
-				inventario);
+				inventario,
+				nota,
+				puntuacion);
 	}
 
 	// DELETE

@@ -27,13 +27,16 @@ public class Producto {
 	private String variedad;
 	private Double precio;
 	private Integer inventario;
+	private String nota;
+	private Integer puntuacion;
 
 	public Producto() { // empty constructor
 
 	}
 
 	public Producto(Long id, String nombre, String rutaimagen, String region, String cosecha, String altura,
-			Integer humedad, String proceso, String preparacion, String variedad, Double precio, Integer inventario) {
+			Integer humedad, String proceso, String preparacion, String variedad, Double precio, Integer inventario,
+			String nota, Integer puntuacion) {
 		this.id = id;
 		this.nombre = nombre;
 		this.rutaimagen = rutaimagen;
@@ -46,6 +49,24 @@ public class Producto {
 		this.variedad = variedad;
 		this.precio = precio;
 		this.inventario = inventario;
+		this.nota = nota;
+		this.puntuacion = puntuacion;
+	}
+
+	public String getNota() {
+		return this.nota;
+	}
+
+	public void setNota(String nota) {
+		this.nota = nota;
+	}
+
+	public Integer getPuntuacion() {
+		return this.puntuacion;
+	}
+
+	public void setPuntuacion(Integer puntuacion) {
+		this.puntuacion = puntuacion;
 	}
 
 	public Long getId() {
@@ -149,7 +170,7 @@ public class Producto {
 		return "Producto [id=" + id + ", nombre=" + nombre + ", rutaimagen=" + rutaimagen + ", region=" + region
 				+ ", cosecha=" + cosecha + ", altura=" + altura + ", humedad=" + humedad + ", proceso=" + proceso
 				+ ", preparacion=" + preparacion + ", variedad=" + variedad + ", precio=" + precio + ", inventario="
-				+ inventario + "]";
+				+ inventario + ", nota=" + nota + ", puntuacion=" + puntuacion + "]";
 	}
 
 }

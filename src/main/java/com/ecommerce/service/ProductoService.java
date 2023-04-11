@@ -64,7 +64,9 @@ public class ProductoService {
 			String preparacion,
 			String variedad,
 			Double precio,
-			Integer inventario) {
+			Integer inventario,
+			String nota,
+			Integer puntuacion) {
 		Producto productoBuscado = productoRepository.findById(id)
 				.orElseThrow(() -> new IllegalStateException("The element dont exist"));
 		if (nombre != null)
