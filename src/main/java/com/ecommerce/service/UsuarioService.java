@@ -86,8 +86,8 @@ public class UsuarioService {
 					if (newUsuario.getEstado() != null && !newUsuario.getEstado().isEmpty()) {
 						usuario.setEstado(newUsuario.getEstado());
 					}
-					if (newUsuario.getCodigopostal() != null && !newUsuario.getCodigopostal().isEmpty()) {
-						usuario.setCodigopostal(newUsuario.getCodigopostal());
+					if (newUsuario.getCodigo_postal() != null && !newUsuario.getCodigo_postal().isEmpty()) {
+						usuario.setCodigo_postal(newUsuario.getCodigo_postal());
 					}
 					return usuarioRepository.save(usuario);
 				})
