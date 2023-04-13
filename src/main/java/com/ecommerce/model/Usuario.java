@@ -8,13 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name = "usuarios")
 
 public class Usuario {
-	@Id 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	
+
 	private Long id;
 	private String nombre;
 	private String apellido;
@@ -27,22 +27,22 @@ public class Usuario {
 	private String colonia;
 	private String municipio;
 	private String estado;
-	private String codigopostal;
-	private String carritoProductos;
-	private String carritoMolido;
-	private String carritoTostado;
-	private String carritoCantidad;
-	private String esAdmin;
-	
-	public Usuario() { //empty constructor
-		
+	private String codigo_postal;
+	private String carrito_productos;
+	private String carrito_molido;
+	private String carrito_tostado;
+	private String carrito_cantidad;
+	private String es_admin;
+
+	public Usuario() { // empty constructor
+
 	}
 
 	public Usuario(Long id, String nombre, String apellido, String email, String password, String telefono,
 			String nacimiento, String calle, String numero, String colonia, String municipio, String estado,
-			String codigopostal, String carritoProductos, String carritoMolido, String carritoTostado,
-			String carritoCantidad, String esAdmin) {
-				
+			String codigo_postal, String carrito_productos, String carrito_molido, String carrito_tostado,
+			String carrito_cantidad, String es_admin) {
+
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -55,12 +55,12 @@ public class Usuario {
 		this.colonia = colonia;
 		this.municipio = municipio;
 		this.estado = estado;
-		this.codigopostal = codigopostal;
-		this.carritoProductos = carritoProductos;
-		this.carritoMolido = carritoMolido;
-		this.carritoTostado = carritoTostado;
-		this.carritoCantidad = carritoCantidad;
-		this.esAdmin = esAdmin;
+		this.codigo_postal = codigo_postal;
+		this.carrito_productos = carrito_productos;
+		this.carrito_molido = carrito_molido;
+		this.carrito_tostado = carrito_tostado;
+		this.carrito_cantidad = carrito_cantidad;
+		this.es_admin = es_admin;
 	}
 
 	public Long getId() {
@@ -159,52 +159,52 @@ public class Usuario {
 		this.estado = estado;
 	}
 
-	public String getCodigopostal() {
-		return codigopostal;
+	public String getCodigo_postal() {
+		return codigo_postal;
 	}
 
-	public void setCodigopostal(String codigopostal) {
-		this.codigopostal = codigopostal;
+	public void setCodigo_postal(String codigo_postal) {
+		this.codigo_postal = codigo_postal;
 	}
 
-	public String getCarritoProductos() {
-		return carritoProductos;
+	public String getCarrito_productos() {
+		return carrito_productos;
 	}
 
-	public void setCarritoProductos(String carritoProductos) {
-		this.carritoProductos = carritoProductos;
+	public void setCarrito_productos(String carrito_productos) {
+		this.carrito_productos = carrito_productos;
 	}
 
-	public String getCarritoMolido() {
-		return carritoMolido;
+	public String getCarrito_molido() {
+		return carrito_molido;
 	}
 
-	public void setCarritoMolido(String carritoMolido) {
-		this.carritoMolido = carritoMolido;
+	public void setCarrito_molido(String carrito_molido) {
+		this.carrito_molido = carrito_molido;
 	}
 
-	public String getCarritoTostado() {
-		return carritoTostado;
+	public String getCarrito_tostado() {
+		return carrito_tostado;
 	}
 
-	public void setCarritoTostado(String carritoTostado) {
-		this.carritoTostado = carritoTostado;
+	public void setCarrito_tostado(String carrito_tostado) {
+		this.carrito_tostado = carrito_tostado;
 	}
 
-	public String getCarritoCantidad() {
-		return carritoCantidad;
+	public String getCarrito_cantidad() {
+		return carrito_cantidad;
 	}
 
-	public void setCarritoCantidad(String carritoCantidad) {
-		this.carritoCantidad = carritoCantidad;
+	public void setCarrito_cantidad(String carrito_cantidad) {
+		this.carrito_cantidad = carrito_cantidad;
 	}
 
-	public String getEsAdmin() {
-		return esAdmin;
+	public String getEs_admin() {
+		return es_admin;
 	}
 
-	public void setEsAdmin(String esAdmin) {
-		this.esAdmin = esAdmin;
+	public void setEs_admin(String es_admin) {
+		this.es_admin = es_admin;
 	}
 
 	@Override
@@ -212,9 +212,9 @@ public class Usuario {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
 				+ ", password=" + password + ", telefono=" + telefono + ", nacimiento=" + nacimiento + ", calle="
 				+ calle + ", numero=" + numero + ", colonia=" + colonia + ", municipio=" + municipio + ", estado="
-				+ estado + ", codigopostal=" + codigopostal + ", carritoProductos=" + carritoProductos
-				+ ", carritoMolido=" + carritoMolido + ", carritoTostado=" + carritoTostado + ", carritoCantidad="
-				+ carritoCantidad + ", esAdmin=" + esAdmin + "]";
+				+ estado + ", codigopostal=" + codigo_postal + ", carrito_productos=" + carrito_productos
+				+ ", carrito_molido=" + carrito_molido + ", carrito_tostado=" + carrito_tostado + ", carrito_cantidad="
+				+ carrito_cantidad + ", es_admin=" + es_admin + "]";
 	}
-	
+
 }
