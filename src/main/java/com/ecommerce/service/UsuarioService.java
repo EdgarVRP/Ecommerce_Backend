@@ -89,6 +89,19 @@ public class UsuarioService {
 					if (newUsuario.getCodigo_postal() != null && !newUsuario.getCodigo_postal().isEmpty()) {
 						usuario.setCodigo_postal(newUsuario.getCodigo_postal());
 					}
+					if (newUsuario.getCarrito_productos() != null && !newUsuario.getCarrito_productos().isEmpty()) {
+						usuario.setCarrito_productos(newUsuario.getCarrito_productos());
+					}
+					if (newUsuario.getCarrito_molido() != null && !newUsuario.getCarrito_molido().isEmpty()) {
+						usuario.setCarrito_molido(newUsuario.getCarrito_molido());
+					}
+					if (newUsuario.getCarrito_tostado() != null && !newUsuario.getCarrito_tostado().isEmpty()) {
+						usuario.setCarrito_tostado(newUsuario.getCarrito_tostado());
+					}
+					if (newUsuario.getCarrito_cantidad() != null && !newUsuario.getCarrito_cantidad().isEmpty()) {
+						usuario.setCarrito_cantidad(newUsuario.getCarrito_cantidad());
+					}
+
 					return usuarioRepository.save(usuario);
 				})
 				.orElseGet(() -> {
