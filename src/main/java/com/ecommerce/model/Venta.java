@@ -16,11 +16,11 @@ public class Venta {
 	@Column(name = "id", unique = true, nullable = false)
 	
 	private Long id;
-	private String idUsuario;
-	private String idProducto;
-	private String fechaEntrega;
-	private String fechaPago;
-	private String precioVenta;
+	private String id_usuario;
+	private String id_producto;
+	private String fecha_entrega;
+	private String fecha_pago;
+	private String precio_venta;
 	private String tostado;
 	private String molido;
 	
@@ -28,14 +28,14 @@ public class Venta {
 		
 	}
 
-	public Venta(Long id, String idUsuario, String idProducto, String fechaEntrega, String fechaPago,
-			String precioVenta, String tostado, String molido) {
+	public Venta(Long id, String id_usuario, String id_producto, String fecha_entrega, String fecha_pago,
+			String precio_venta, String tostado, String molido) {
 		this.id = id;
-		this.idUsuario = idUsuario;
-		this.idProducto = idProducto;
-		this.fechaEntrega = fechaEntrega;
-		this.fechaPago = fechaPago;
-		this.precioVenta = precioVenta;
+		this.id_usuario = id_usuario;
+		this.id_producto = id_producto;
+		this.fecha_entrega = fecha_entrega;
+		this.fecha_pago = fecha_pago;
+		this.precio_venta = precio_venta;
 		this.tostado = tostado;
 		this.molido = molido;
 	}
@@ -49,43 +49,43 @@ public class Venta {
 	}
 
 	public String getIdUsuario() {
-		return idUsuario;
+		return id_usuario;
 	}
 
-	public void setIdUsuario(String idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setIdUsuario(String id_usuario) {
+		this.id_usuario = id_usuario;
 	}
 
 	public String getIdProducto() {
-		return idProducto;
+		return id_producto;
 	}
 
-	public void setIdProducto(String idProducto) {
-		this.idProducto = idProducto;
+	public void setIdProducto(String id_producto) {
+		this.id_producto = id_producto;
 	}
 
 	public String getFechaEntrega() {
-		return fechaEntrega;
+		return fecha_entrega;
 	}
 
-	public void setFechaEntrega(String fechaEntrega) {
-		this.fechaEntrega = fechaEntrega;
+	public void setFechaEntrega(String fecha_entrega) {
+		this.fecha_entrega = fecha_entrega;
 	}
 
 	public String getFechaPago() {
-		return fechaPago;
+		return fecha_pago;
 	}
 
-	public void setFechaPago(String fechaPago) {
-		this.fechaPago = fechaPago;
+	public void setFechaPago(String fecha_pago) {
+		this.fecha_pago = fecha_pago;
 	}
 
 	public String getPrecioVenta() {
-		return precioVenta;
+		return precio_venta;
 	}
 
-	public void setPrecioVenta(String precioVenta) {
-		this.precioVenta = precioVenta;
+	public void setPrecioVenta(String precio_venta) {
+		this.precio_venta = precio_venta;
 	}
 
 	public String getTostado() {
@@ -106,8 +106,8 @@ public class Venta {
 
 	@Override
 	public String toString() {
-		return "Venta [id=" + id + ", idUsuario=" + idUsuario + ", idProducto=" + idProducto + ", fechaEntrega="
-				+ fechaEntrega + ", fechaPago=" + fechaPago + ", precioVenta=" + precioVenta + ", tostado=" + tostado
+		return "Venta [id=" + id + ", id_usuario=" + id_usuario + ", id_producto=" + id_producto + ", fecha_entrega="
+				+ fecha_entrega + ", fecha_pago=" + fecha_pago + ", precio_venta=" + precio_venta + ", tostado=" + tostado
 				+ ", molido=" + molido + "]";
 	}
 
