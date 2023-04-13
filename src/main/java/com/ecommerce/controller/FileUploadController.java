@@ -23,8 +23,8 @@ public class FileUploadController {
 
     // Controller for file upload
     @PostMapping()
-    public String uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public void uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
         fileUploadService.saveFile(file);
-        return "File uploaded successfully";
+        System.out.println("File uploaded successfully");
     }
 }
