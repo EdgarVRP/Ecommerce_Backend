@@ -33,6 +33,7 @@ public class ProductoService {
 	// Post
 	// Guarda un nuevo elemento
 	public Producto addProducto(Producto producto) {
+		System.out.println("Producto agregado: " + producto.toString());
 		return productoRepository.save(producto);
 	}
 

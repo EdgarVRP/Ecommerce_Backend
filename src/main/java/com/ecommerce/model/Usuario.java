@@ -8,13 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name = "usuarios")
 
 public class Usuario {
-	@Id 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	
+
 	private Long id;
 	private String nombre;
 	private String apellido;
@@ -33,16 +33,16 @@ public class Usuario {
 	private String carrito_tostado;
 	private String carrito_cantidad;
 	private String es_admin;
-	
-	public Usuario() { //empty constructor
-		
+
+	public Usuario() { // empty constructor
+
 	}
 
 	public Usuario(Long id, String nombre, String apellido, String email, String password, String telefono,
 			String nacimiento, String calle, String numero, String colonia, String municipio, String estado,
 			String codigo_postal, String carrito_productos, String carrito_molido, String carrito_tostado,
 			String carrito_cantidad, String es_admin) {
-				
+
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -217,9 +217,4 @@ public class Usuario {
 				+ carrito_cantidad + ", es_admin=" + es_admin + "]";
 	}
 
-	
-
-	
-
-	
 }
